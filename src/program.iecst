@@ -1,0 +1,14 @@
+PROGRAM Program1
+	VAR
+		buffer : ARRAY[0..255] OF BYTE;
+		destination : UDPEndpoint;
+		bytes_sent : LINT;
+	END_VAR
+
+	buffer[0] := 16#BE;
+	buffer[1] := 16#EF;
+	destination.host := '192.168.1.123';
+	destination.port := 1234;
+
+	bytes_sent := sendto(buf := REF(buffer[0]), buflen := SIZEOF(buffer), dst := destination, ENO => ENO);
+END_PROGRAM

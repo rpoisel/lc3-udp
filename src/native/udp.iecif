@@ -1,0 +1,9 @@
+{extern_c}
+
+FUNCTION sendto : LINT
+	VAR_INPUT
+		buf : REF_TO BYTE;
+		buflen : UDINT;
+		dst : UDPEndpoint;
+	END_VAR
+END_FUNCTION
