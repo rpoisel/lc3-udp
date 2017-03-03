@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+ptk.properties.include.path.WindowsX86=
+ptk.properties.library.name.WindowsX86=ws2_32
+ptk.properties.library.path.WindowsX86=
+ptk.properties.selected.platform=WindowsX86

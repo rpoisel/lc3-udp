@@ -31,11 +31,8 @@ void  lcfu___SENDTO(LC_TD_Function_SENDTO* LC_this, LC_TD_BYTE (* LC_VD_BUF), LC
     LC_this->LC_VD_SENDTO = sendto(udp_socket, LC_VD_BUF, LC_VD_BUFLEN, 0, (struct sockaddr*) &host, sizeof(host));
     close(udp_socket);
 
-    success = LC_this->LC_VD_SENDTO > 0;
-    if (success)
+    if (LC_this->LC_VD_SENDTO == -1)
     {
-        return;
+        LC_this->LC_VD_ENO = LC_EL_false;
     }
-    LC_this->LC_VD_ENO = LC_EL_false;
-    return;
 }

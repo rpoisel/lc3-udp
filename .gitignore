@@ -1,3 +1,4 @@
 .cproject
 src-gen/
 target/
+*.db

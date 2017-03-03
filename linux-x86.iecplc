@@ -1,7 +1,3 @@
-/*
- * This is a logi.CAD 3 template for the local PLC object
- */
-
 {
 	CHANNEL LinuxX86Channel
 		TCP
