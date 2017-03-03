@@ -3,7 +3,7 @@
  */
 
 {
-	CHANNEL LocalChannel
+	CHANNEL LinuxX86Channel
 		TCP
 			ADDRESS := 127.0.0.1;
 			PORT    := 1534;
@@ -11,8 +11,8 @@
 	END_CHANNEL
 }
 
-CONFIGURATION LocalConfiguration
-	RESOURCE local ON BuiltInPlc { ON_CHANNEL := LocalChannel }
+CONFIGURATION LinuxX86Configuration
+	RESOURCE linuxx86 ON LinuxX86 { ON_CHANNEL := LinuxX86Channel }
 		TASK DefaultTask(INTERVAL := TIME#500ms, PRIORITY := 38229);
 		PROGRAM Program1 WITH DefaultTask :
 			Program1;

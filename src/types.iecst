@@ -1,5 +1,4 @@
 TYPE
-	IPv4Address : ARRAY [0..3] OF BYTE;
 	UDPEndpoint : STRUCT
 		host : STRING[128];
 		port : UINT;
